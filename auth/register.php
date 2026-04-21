@@ -102,8 +102,8 @@ if(isset($_POST['daftar'])){
     <div class="card shadow">
         <div class="card-body p-5">
             <div class="text-center mb-4">
-                <h3 class="mb-2">📚 Register Siswa</h3>
-                <p class="text-muted">Daftar akun untuk akses perpustakaan digital</p>
+                <h3 class="mb-2">Register Siswa</h3>
+                <p class="text-muted">Daftar akun sesuai indentitas Sekolah</p>
             </div>
 
             <?php if (isset($error)): ?>

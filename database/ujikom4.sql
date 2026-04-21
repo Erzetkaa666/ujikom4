@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Apr 2026 pada 16.18
+-- Waktu pembuatan: 21 Apr 2026 pada 05.51
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -40,16 +40,17 @@ CREATE TABLE `anggota` (
 --
 
 INSERT INTO `anggota` (`id`, `nama`, `tingkat`, `jurusan`, `created_at`) VALUES
-(6, 'Muhammad Dzikril Hakim', 10, 'TKJ', '2026-04-26 11:39:39'),
-(7, 'Pandji Ismunandar', 10, 'RPL', '2026-04-25 13:02:47'),
-(8, 'Iqbal Fauzan Maulana', 10, 'RPL', '2026-04-20 13:16:24'),
-(9, 'Agis Saputra', 10, 'RPL', '2026-04-20 13:16:48'),
-(10, 'Alief Nur Shabri Aqila', 10, 'DKV', '2026-04-20 13:17:07'),
-(11, 'Billie Rizky Muzibu', 10, 'RPL', '2026-04-20 13:17:28'),
-(12, 'Muhammad Khodi Rabbani', 10, 'DKV', '2026-04-20 13:17:51'),
-(13, 'Fikri Khairul Umam', 10, 'RPL', '2026-04-20 13:18:13'),
-(14, 'Fadhil Muhammad', 10, 'RPL', '2026-04-20 13:18:29'),
-(17, 'Rapli Putra Pamungkas', 12, 'TKRO', '2026-04-20 14:04:45');
+(6, 'Muhammad Dzikril Hakim', 12, 'TITL', '2026-04-26 11:39:39'),
+(7, 'Pandji Ismunandar', 12, 'TITL', '2026-04-25 13:02:47'),
+(8, 'Iqbal Fauzan Maulana', 12, 'RPL', '2026-04-20 13:16:24'),
+(9, 'Agis Saputra', 12, 'TKRO', '2026-04-20 13:16:48'),
+(10, 'Alief Nur Shabri Aqila', 12, 'DKV', '2026-04-20 13:17:07'),
+(11, 'Billie Rizky Muzibu', 12, 'ANI', '2026-04-20 13:17:28'),
+(12, 'Muhammad Khodi Rabbani', 12, 'TITL', '2026-04-20 13:17:51'),
+(13, 'Fikri Khairul Umam', 12, 'RPL', '2026-04-20 13:18:13'),
+(14, 'Fadhil Muhammad', 12, 'RPL', '2026-04-20 13:18:29'),
+(17, 'Rapli Putra Pamungkas', 12, 'AKL', '2026-04-20 14:04:45'),
+(18, 'Farel Juliansyah', 12, 'TKJ', '2026-04-21 03:49:58');
 
 -- --------------------------------------------------------
 
@@ -101,7 +102,7 @@ INSERT INTO `buku` (`id`, `judul`, `pengarang`, `tahun_terbit`, `jenis`, `stok`,
 (25, 'Jane Eyre', 'Charlotte Bronte', 1847, 'Novel Klasik', 3, 62000, '2026-04-26 11:36:24', '2026-04-26 11:36:24'),
 (26, 'Wuthering Heights', 'Emily Bronte', 1847, 'Novel Klasik', 2, 58000, '2026-04-26 11:36:24', '2026-04-26 11:36:24'),
 (27, 'Pride and Prejudice', 'Jane Austen', 1813, 'Novel Klasik', 4, 60000, '2026-04-26 11:36:24', '2026-04-26 11:36:24'),
-(28, 'Sense and Sensibility', 'Jane Austen', 1811, 'Novel Klasik', 2, 55000, '2026-04-26 11:36:24', '2026-04-26 11:36:24'),
+(28, 'Sense and Sensibility', 'Jane Austen', 1811, 'Novel Klasik', 2, 55000, '2026-04-26 11:36:24', '2026-04-21 03:43:29'),
 (29, 'The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'Novel Klasik', 3, 50000, '2026-04-26 11:36:24', '2026-04-26 11:36:24'),
 (30, 'To Kill a Mockingbird', 'Harper Lee', 1960, 'Novel Klasik', 2, 52000, '2026-04-26 11:36:24', '2026-04-26 11:36:24'),
 (31, '1984', 'George Orwell', 1949, 'Dystopia', 3, 68000, '2026-04-26 11:36:24', '2026-04-26 11:36:24'),
@@ -175,7 +176,7 @@ INSERT INTO `buku` (`id`, `judul`, `pengarang`, `tahun_terbit`, `jenis`, `stok`,
 (99, 'Dune', 'Frank Herbert', 1965, 'Sci-Fi', 3, 98000, '2026-04-26 11:36:24', '2026-04-26 11:36:24'),
 (100, 'Foundation', 'Isaac Asimov', 1951, 'Sci-Fi', 2, 85000, '2026-04-26 11:36:24', '2026-04-26 11:36:24'),
 (101, 'Neuromancer', 'William Gibson', 1984, 'Sci-Fi', 1, 75000, '2026-04-26 11:36:24', '2026-04-20 11:40:18'),
-(102, 'Snow Crash', 'Neal Stephenson', 1992, 'Sci-Fi', 2, 88000, '2026-04-26 11:36:24', '2026-04-20 13:12:55');
+(102, 'Snow Crash', 'Neal Stephenson', 1992, 'Sci-Fi', 2, 88000, '2026-04-26 11:36:24', '2026-04-21 03:37:50');
 
 -- --------------------------------------------------------
 
@@ -209,7 +210,9 @@ INSERT INTO `transaksi` (`id`, `id_anggota`, `id_buku`, `tanggal_pinjam`, `batas
 (2, 6, 101, '2026-04-20', '2026-04-21', '2026-04-26', 'kembali', 'hilang', 0, 'Maaf bg', 10000, 75000, 'approved', '2026-04-20 11:40:18'),
 (3, 6, 84, '2026-04-20', '2026-04-23', '2026-04-20', 'kembali', 'aman', 0, '', 0, 0, 'approved', '2026-04-20 12:47:56'),
 (4, 7, 102, '2026-04-20', '2026-04-21', '2026-04-20', 'kembali', 'aman', 0, '', 0, 0, 'approved', '2026-04-20 13:12:25'),
-(5, 6, 86, '2026-04-20', '2026-04-22', '2026-04-25', 'kembali', 'aman', 0, 'aman bg\r\n', 6000, 0, 'approved', '2026-04-20 14:09:40');
+(5, 6, 86, '2026-04-20', '2026-04-22', '2026-04-25', 'kembali', 'aman', 0, 'aman bg\r\n', 6000, 0, 'approved', '2026-04-20 14:09:40'),
+(6, 7, 102, '2026-04-21', '2026-04-22', '2026-04-21', 'kembali', 'aman', 0, 'aman\r\n', 0, 0, 'approved', '2026-04-21 03:37:17'),
+(7, 7, 28, '2026-04-21', '2026-04-22', '2026-04-21', 'kembali', 'robek', 1, 'roek', 0, 5000, 'approved', '2026-04-21 03:42:15');
 
 -- --------------------------------------------------------
 
@@ -231,7 +234,6 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `role`, `id_anggota`, `created_at`) VALUES
-(1, 'admin', '0192023a7bbd73250516f069df18b500', 'admin', NULL, '2026-04-26 11:36:24'),
 (7, 'dzikril', '827ccb0eea8a706c4c34a16891f84e7b', 'siswa', 6, '2026-04-26 11:39:39'),
 (8, 'pandji', '827ccb0eea8a706c4c34a16891f84e7b', 'siswa', 7, '2026-04-25 13:02:47'),
 (9, 'iqbal', '827ccb0eea8a706c4c34a16891f84e7b', 'siswa', 8, '2026-04-20 13:16:24'),
@@ -241,7 +243,9 @@ INSERT INTO `user` (`id`, `username`, `password`, `role`, `id_anggota`, `created
 (13, 'khodi', '827ccb0eea8a706c4c34a16891f84e7b', 'siswa', 12, '2026-04-20 13:17:51'),
 (14, 'umam', '827ccb0eea8a706c4c34a16891f84e7b', 'siswa', 13, '2026-04-20 13:18:13'),
 (15, 'fadel', '827ccb0eea8a706c4c34a16891f84e7b', 'siswa', 14, '2026-04-20 13:18:29'),
-(16, 'mpiw', 'e10adc3949ba59abbe56e057f20f883e', 'siswa', 17, '2026-04-20 14:04:45');
+(16, 'mpiw', 'e10adc3949ba59abbe56e057f20f883e', 'siswa', 17, '2026-04-20 14:04:45'),
+(17, 'Owner', '5be057accb25758101fa5eadbbd79503', 'admin', NULL, '2026-04-21 03:34:31'),
+(18, 'farel', '827ccb0eea8a706c4c34a16891f84e7b', 'siswa', 18, '2026-04-21 03:49:58');
 
 --
 -- Indexes for dumped tables
@@ -286,7 +290,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `anggota`
 --
 ALTER TABLE `anggota`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT untuk tabel `buku`
@@ -298,13 +302,13 @@ ALTER TABLE `buku`
 -- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

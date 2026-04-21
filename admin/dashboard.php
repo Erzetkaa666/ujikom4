@@ -100,7 +100,7 @@ $data = mysqli_query($koneksi, "SELECT t.id, a.nama, a.tingkat, a.jurusan, b.jud
                 <a href="user.php" class="btn btn-outline-info btn-sm">Kelola User/Login</a>
                 <a href="transaksi.php" class="btn btn-outline-success btn-sm">Kelola Transaksi</a>
                 <a href="verifikasi_pengembalian.php" class="btn btn-outline-warning btn-sm">Verifikasi Return</a>
-                <a href="../auth/logout.php" class="btn btn-outline-danger btn-sm">Logout</a>
+                <a href="../auth/logout.php" class="btn btn-outline-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin logout?')">Logout</a>
             </div>
         </div>
     </div>

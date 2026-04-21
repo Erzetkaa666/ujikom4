@@ -107,7 +107,7 @@ $denda = mysqli_fetch_assoc(mysqli_query($koneksi,"
                 <div class="d-flex flex-wrap gap-2">
                     <a href="pinjam.php" class="btn btn-primary btn-sm">Pinjam Buku</a>
                     <a href="kembali.php" class="btn btn-outline-primary btn-sm">Kembalikan Buku</a>
-                    <a href="../auth/logout.php" class="btn btn-outline-danger btn-sm">Logout</a>
+                    <a href="../auth/logout.php" class="btn btn-outline-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin logout?')">Logout</a>
                 </div>
             </div>
         </div>
