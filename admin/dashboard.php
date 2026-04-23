@@ -99,7 +99,7 @@ $data = mysqli_query($koneksi, "SELECT t.id, a.nama, a.tingkat, a.jurusan, b.jud
                 <a href="buku.php" class="btn btn-outline-primary btn-sm">Kelola Buku</a>
                 <a href="user.php" class="btn btn-outline-info btn-sm">Kelola User/Login</a>
                 <a href="transaksi.php" class="btn btn-outline-success btn-sm">Kelola Transaksi</a>
-                <a href="verifikasi_pengembalian.php" class="btn btn-outline-warning btn-sm">Verifikasi Return</a>
+                <a href="verifikasi_pengembalian.php" class="btn btn-outline-success btn-sm">Verifikasi Return</a>
                 <a href="../auth/logout.php" class="btn btn-outline-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin logout?')">Logout</a>
             </div>
         </div>
@@ -125,7 +125,7 @@ $data = mysqli_query($koneksi, "SELECT t.id, a.nama, a.tingkat, a.jurusan, b.jud
         <div class="col-md-3">
             <div class="card shadow-sm text-center">
                 <div class="card-body">
-                    <h6 class="text-secondary">Terlambat</h6>
+                    <h6 class="text-secondary">Terlambat Pengembalian</h6>
                     <h3 class="text-danger mb-0"><?= $terlambat ?></h3>
                 </div>
             </div>
