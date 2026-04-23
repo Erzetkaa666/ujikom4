@@ -268,11 +268,8 @@ $data = mysqli_query($koneksi, "SELECT t.id, a.nama, a.tingkat, a.jurusan, b.jud
                                             </div>
                                         </div>
 
-                                        <!-- Catatan tambahan -->
-                                        <div class="mb-3">
-                                            <label class="form-label">Catatan Tambahan (Opsional)</label>
-                                            <textarea name="catatan" class="form-control" rows="2" placeholder="Contoh: Halaman robek sejak..."></textarea>
-                                        </div>
+                                        <!-- Catatan otomatis untuk admin -->
+                                        <input type="hidden" name="catatan" value="Direturn oleh admin">
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Batal</button>
